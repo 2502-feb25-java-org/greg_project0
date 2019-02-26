@@ -17,3 +17,9 @@ body{
 li{
 	color:orange;
 }
+
+table, thead, tbody td{
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+}
