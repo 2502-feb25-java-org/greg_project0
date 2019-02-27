@@ -2,7 +2,7 @@
 <html lang=en-US>
 
 <head>
-    <title> Sign Up </title>
+    <title> Contact Us </title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -29,23 +29,20 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html"> Home </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html"> Contact Us </a>
-                        </li>
-                        <li class="nav-item dropdown active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Login/SignUp
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html"> Contact Us <span class="sr-only">(current)</span>
                             </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Login/SignUp </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#Login"> Login (Existing User) </a>
-                                <a class="dropdown-item active" href="signIn.html"> Sign Up (New User) <span class="sr-only">(current)</span> </a>
+                                <a class="dropdown-item" href="signIn.html"> Sign Up (New User) </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#AdminLogIn"> Admin Login </a>
                             </div>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li> -->
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -60,7 +57,7 @@
             <form action="url" method="GET">
                 <fieldset>
                     <div class="jumbotron"> <!-- Title Div -->
-                        <legend> Sign-Up Requirements </legend>
+                        <legend> Contact Us </legend>
                     </div>
                     <div class="form-group"> <!-- Name Div -->
                         <label for="fName"> First Name: </label>
@@ -70,27 +67,13 @@
                         <label for="lName"> Last Name: </label>
                         <input type="text" class="form-control" id="lName" name="lName" required />
                     </div>
-                    <div> <!-- Gender Radio Div -->
-                        <label for="gender"> Gender: </label>
-                            <label for="male"> Male <input type="radio" name="gender" id="male" value="male" checked
-                                    required /> </label>
-                            <label for="female"> Female <input type="radio" name="gender" id="female" value="female"
-                                    required /> </label>
-                            <label for="other"> Other <input type="radio" name="gender" id="other" value="other"
-                                    required /> </label>
-                    </div>
-                    <div class="form-group"> <!-- Age Div -->
-                        <label for="age"> Age: </label>
-                        <input type="number" class="form-control" id="age" name="age" min="18" max="99" required />
-                    </div>
-                    <div class="form-group"> <!-- Phone Number Div -->
-                        <label for="phone"> Phone Number: </label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="XXX-XXX-XXXX" 
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-                    </div>
                     <div class="form-group"> <!-- Email Div -->
                         <label for="eM"> Email: </label>
                         <input type="email" class="form-control" id="eM" name="eM" placeholder="email@example.com" required />
+                    </div>
+                    <div class="form-group"> <!-- Query Div -->
+                        <label for="queri"> Send us a message (500 characters max): </label>
+                        <textarea id="queri" class="form-control" name="queri" maxlength="500" minlength="30" required> </textarea>
                     </div>
                 </fieldset>
                 <input type="submit" value="Submit" />
