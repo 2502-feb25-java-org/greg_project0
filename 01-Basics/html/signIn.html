@@ -1,0 +1,62 @@
+<!Doctype html>
+<html lang=en-US>
+
+<head>
+    <title> Sign In </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1> Revature Sign In </h1>
+            <img alt="Image Not Found" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTurzZXgKPc-tSje6MP3yoRHYi6Rwf1tddkpbmEMiAesQXKo_lO" 
+            width="100" length="100" />
+            <a href="index.html"> Home </a>
+            <a href="contact.html"> Contact Us </a>
+            <a href="signUp.html"> Sign Up </a>
+        </nav>
+    </header>
+    <main>
+        <form action="url" method="POST">
+            <fieldset>
+                <legend> Sign-Up Requirements </legend>
+                <div>
+                    <!-- Name Div -->
+                    <label for="fName"> First Name: </label>
+                    <input type="text" id="fName" name="fName" placeholder="First Name" required />
+                    <label for="lName"> Last Name: </label>
+                    <input type="text" id="lName" name="lName" placeholder="Last Name" required />
+                </div>
+                <div>
+                    <!-- Gender Radial Div -->
+                    <label for="gender"> Gender: 
+                        <label for="male"> Male<input type="radio" name="gender" id="male" checked required/> </label>
+                        <label for="female"> Female<input type="radio" name="gender" id="female" required/> </label>
+                        <label for="other"> Other<input type="radio" name="gender" id="other" required/> </label>
+                    </label>
+                </div>
+                <div>
+                    <!-- Age Div -->
+                    <label for="age"> Age: </label>
+                    <input type="number" id="age" name="age" min="18" max="99" required placeholder="18"/>
+                </div>
+                <div>
+                    <!-- Phone Number Div -->
+                    <label for="phone"> Phone Number: </label>
+                    <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx"
+                    error="Please use the proper format" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                </div>
+                <div>
+                    <!-- Email Div -->
+                    <label for="eM"> Email: </label>
+                    <input type="email" id="eM" name="eM" placeholder="email@example.com" />
+                </div>
+            </fieldset>
+            <input type="submit" value="Submit" />
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
