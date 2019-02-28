@@ -1,1 +1,2 @@
-alert("Hello World!");
+//Comment like this
+//alert("Hello World!");
