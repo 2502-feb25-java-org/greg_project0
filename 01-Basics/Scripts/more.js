@@ -4,7 +4,7 @@ console.log("first run");
 var add = function(a) {
     return function(b) {
         return function(c) {
-            return a + b + c;
+            return (a + b + c);
         }
     }
 }
@@ -15,7 +15,7 @@ console.log(addToInnerMost(7));
 
 add(5)(6)(7);//Currying process
 
-//Status Reports
+//Server Status Reports
 //1xx - Informational
 //2xx - Success
 //3xx - Redirectional
