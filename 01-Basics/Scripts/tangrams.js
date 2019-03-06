@@ -1,11 +1,24 @@
 function draw() {
-    var canvas = document.getElementById('tutorial');
+    let canvas = document.getElementById('tutorial');
     if (canvas.getContext) {
-        var ctx = canvas.getContext('2d');
+        let ctx = canvas.getContext('2d');
+        let raf;
+        let running = false;
         //Angles are in radians, not degrees
         //To convert: radians = (Math.PI/180)*degrees
         
         //Creating some test Tangram shapes
+        /*
+        let smallTriangle = {
+            x: 0,
+            y: 0,
+            color: 'blue',
+            draw: function() {
+
+            }
+        }
+        */
+
         //Small Triangle 1
         let smallTriangle1 = new Path2D();
         smallTriangle1.moveTo(125, 125);
@@ -69,6 +82,6 @@ function draw() {
         ctx.fill(largeTriangle2);
         ctx.save();
 
-        
+
     }
 }
