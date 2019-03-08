@@ -1,0 +1,18 @@
+ACID Properties:
+A tomicity
+C onsistency
+I solation
+D urability
+
+
+Transaction 1:
+
+customer A
+Read A; //100
+A = A - 20; //80
+Read A; //80
+
+Customer B
+Read B; //500
+B = B + 20; //520
+Read B; //520
