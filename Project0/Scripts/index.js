@@ -61,13 +61,12 @@ function storeState() {
     localStorage.state = state;
     reButton();
 }
+//Session Storage for Login Info
 function storeuName() {
-    var uName = document.getElementById("uName").value;
-    localStorage.uName = uName;
+    sessionStorage.uName = document.getElementById("uName").value;
 }
 function storepWord() {
-    var pWord = document.getElementById("pWord").value;
-    localStorage.pWord = pWord;
+    sessionStorage.pWord = document.getElementById("pWord").value;
 }
 
 //Load Functions
@@ -214,7 +213,7 @@ function infoCheck() {
 
 //User Login and Admin Login
 function isAdmin() {
-    if((localStorage.uName == "admin") && (localStorage.pWord == "password123")) {
+    if((sessionStorage.uName == "admin") && (sessionStorage.pWord == "password123")) {
         document.getElementById("gamePage").style = "display:contents;";
     }
     else {
