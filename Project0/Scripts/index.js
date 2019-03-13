@@ -61,6 +61,11 @@ function storeState() {
     localStorage.state = state;
     reButton();
 }
+function storeCountry() {
+    var country = document.getElementById("country").value;
+    localStorage.country = country;
+    reButton();
+}
 //Session Storage for Login Info
 function storeuName() {
     sessionStorage.uName = document.getElementById("uName").value;
@@ -133,6 +138,11 @@ function loadState() {
         document.getElementById("state").value = localStorage.state;
     }
 }
+function loadCountry() {
+    if(localStorage.country) {
+        document.getElementById("country").value = localStorage.country;
+    }
+}
 
 function isFirstVisit() {
     return localStorage.hasVisited;
@@ -151,6 +161,7 @@ function loadSignUp() {
         loadAddr2();
         loadZip();
         loadState();
+        loadCountry();
         reButton();
     }
     else {
