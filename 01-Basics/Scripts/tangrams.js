@@ -1,4 +1,5 @@
 function draw() {
+    alert("it worked");
     let canvas = document.getElementById('canvas');
     if (canvas.getContext) {
         let ctx = canvas.getContext('2d');
@@ -81,7 +82,5 @@ function draw() {
         ctx.restore();
         ctx.fill(largeTriangle2);
         ctx.save();
-
-
     }
 }
