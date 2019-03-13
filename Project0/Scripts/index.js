@@ -4,13 +4,11 @@
 
 //Storage Functions
 function storefName() {
-    var fName = document.getElementById("fName").value;
-    localStorage.fName = fName;
+    localStorage.fName = document.getElementById("fName").value;
     reButton();
 }
 function storelName() {
-    var lName = document.getElementById("lName").value;
-    localStorage.lName = lName;
+    localStorage.lName = document.getElementById("lName").value;
     reButton();
 }
 function storeGender() {
@@ -27,43 +25,35 @@ function storeGender() {
     reButton();
 }
 function storeAge() {
-    var age = document.getElementById("age").value;
-    localStorage.age = age;
+    localStorage.age = document.getElementById("age").value;
     reButton();
 }
 function storePhone() {
-    var phone = document.getElementById("phone").value;
-    localStorage.phone = phone;
+    localStorage.phone = document.getElementById("phone").value;
     reButton();
 }
 function storeeMail() {
-    var eMail = document.getElementById("eMail").value;
-    localStorage.eMail = eMail;
+    localStorage.eMail = document.getElementById("eMail").value;
     reButton();
 }
 function storeAddr1() {
-    var addr1 = document.getElementById("addr1").value;
-    localStorage.addr1 = addr1;
+    localStorage.addr1 = document.getElementById("addr1").value;
     reButton();
 }
 function storeAddr2() {
-    var addr2 = document.getElementById("addr2").value;
-    localStorage.addr2 = addr2;
+    localStorage.addr2 = document.getElementById("addr2").value;
     reButton();
 }
 function storeZip() {
-    var zip = document.getElementById("zip").value;
-    localStorage.zip = zip;
+    localStorage.zip = document.getElementById("zip").value;
     reButton();
 }
 function storeState() {
-    var state = document.getElementById("state").value;
-    localStorage.state = state;
+    localStorage.state = document.getElementById("state").value;
     reButton();
 }
 function storeCountry() {
-    var country = document.getElementById("country").value;
-    localStorage.country = country;
+    localStorage.country = document.getElementById("country").value;
     reButton();
 }
 //Session Storage for Login Info
@@ -92,7 +82,7 @@ function loadlName() {
     }
 }
 function loadGender() {
-    var gender = document.getElementsByName("gender");
+    let gender = document.getElementsByName("gender");
     if(localStorage.gender == gender[0].value ) {
         gender[0].checked = true;
     }
@@ -197,28 +187,32 @@ function reButton() {
 function infoCheck() {
     deButton();
     let t = document.getElementById("infoMessage");
+    t.innerText = "";
     if(!localStorage.fName) {
-        t.innerText = "Please fill in your first name";
+        t.innerText = "Please fill in your first name.";
     }
     if(!localStorage.lName) {
         //alert('Please fill in your last name');
-        t.innerText = "Please fill in your last name";
+        t.innerText = "Please fill in your last name.";
     }
     if(!localStorage.age) {
         //alert('Please fill in your age');
-        t.innerText = "Please fill in your age";
+        t.innerText = "Please fill in your age.";
     }
     if(!localStorage.phone) {
         //alert('Please fill in your phone number');
-        t.innerText = "Please fill in your phone number";
+        t.innerText = "Please fill in your phone number.";
     }
     if(!localStorage.eMail) {
         //alert('Please fill in your email address');
-        t.innerText = "Please fill in your email address";
+        t.innerText = "Please fill in your email address.";
     }
     if(localStorage.fName == localStorage.lName) {
         //alert('Your first name cannot be the same as your last name');
-        t.innerText = "Your first name cannot be the same as your last name";
+        t.innerText = "Your first name cannot be the same as your last name.";
+    }
+    else {
+        reButton();
     }
 }
 
