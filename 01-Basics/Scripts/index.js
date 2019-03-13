@@ -63,13 +63,21 @@ function storeState() {
 }
 
 //Load Functions
+/*
 function loadfName() {
     var fName = document.getElementById("fName");
     fName.value = localStorage.fName;
 }
+*/
+function loadfName() {
+    if(localStorage.fName) {
+        document.getElementById("fName").value = localStorage.fName;
+    }
+}
 function loadlName() {
-    var lName = document.getElementById("lName");
-    lName.value = localStorage.lName;
+    if(localStorage.lName) {
+        document.getElementById("lName").value = localStorage.lName;
+    }
 }
 function loadGender() {
     var gender = document.getElementsByName("gender");
@@ -84,40 +92,47 @@ function loadGender() {
     }
 }
 function loadAge() {
-    var age = document.getElementById("age");
-    age.value = localStorage.age;
+    if(localStorage.age) {
+        document.getElementById("age").value = localStorage.age;
+    }
 }
 function loadPhone() {
-    var phone = document.getElementById("phone");
-    phone.value = localStorage.phone;
+    if(localStorage.phone) {
+        document.getElementById("phone").value = localStorage.phone;
+    }
 }
 function loadeMail() {
-    var eMail = document.getElementById("eMail");
-    eMail.value = localStorage.eMail;
+    if(localStorage.eMail) {
+        document.getElementById("eMail").value = localStorage.eMail;
+    }
 }
 function loadAddr1() {
-    var addr1 = document.getElementById("addr1");
-    addr1.value = localStorage.addr1;
+    if(localStorage.addr1) {
+        document.getElementById("addr1").value = localStorage.addr1;
+    }
 }
 function loadAddr2() {
-    var addr2 = document.getElementById("addr2");
-    addr2.value = localStorage.addr2;
+    if(localStorage.addr2) {
+        document.getElementById("addr2").value = localStorage.addr2;
+    }
 }
 function loadZip() {
-    var zip = document.getElementById("zip");
-    zip.value = localStorage.zip;
+    if(localStorage.zip) {
+        document.getElementById("zip").value = localStorage.zip;
+    }
 }
 function loadState() {
-    var state = document.getElementById("state");
-    state.value = localStorage.state;
+    if(localStorage.state) {
+        document.getElementById("state").value = localStorage.state;
+    }
 }
 
 function isFirstVisit() {
-    let hasVisited = localStorage.hasVisited;
+    return localStorage.hasVisited;
 }
 
-function loadEntries() {
-    if (hasVisited) {
+function loadSignUp() {
+    if (!isFirstVisit()) {
         loadfName();
         loadlName();
         loadGender();
@@ -135,19 +150,33 @@ function loadEntries() {
     }
 }
 
+function loadContact() {
+    if (!isFirstVisit()) {
+        loadfName();
+        loadlName();
+        loadeMail();
+        reButton();
+    }
+    else {
+        localStorage.hasVisited = true;
+    }
+}
+
 //Info Checks and Validation
 function deButton() {
-    var b = document.getElementById("submit");
-    b.disabled = true;
+    if(document.getElementById("submitSignUp")) {
+        document.getElementById("submitSignUp").disabled = true;
+    }
 }
 function reButton() {
-    var b = document.getElementById("submit");
-    b.disabled = false;
+    if(document.getElementById("submitSignUp")) {
+        document.getElementById("submitSignUp").disabled = false;
+    }
 }
 
 function infoCheck() {
     deButton();
-    var t = document.getElementById("infoMessage");
+    let t = document.getElementById("infoMessage");
     if(!localStorage.fName) {
         t.innerText = "Please fill in your first name";
     }
@@ -170,5 +199,15 @@ function infoCheck() {
     if(localStorage.fName == localStorage.lName) {
         //alert('Your first name cannot be the same as your last name');
         t.innerText = "Your first name cannot be the same as your last name";
+    }
+}
+
+//User Login and Admin Login
+function isAdmin() {
+    if((localStorage.uName == "admin") && (localStorage.pWord == "password123")) {
+        document.getElementById("gamePage").style = "display:contents;";
+    }
+    else {
+        document.getElementById("gamePage").style = "display:none;";
     }
 }
