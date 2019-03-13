@@ -211,3 +211,6 @@ function isAdmin() {
         document.getElementById("gamePage").style = "display:none;";
     }
 }
+$(function () {
+    $('[data-toggle="popover"]').popover()
+  })
