@@ -1,5 +1,5 @@
 function draw() {
-    let canvas = document.getElementById('tutorial');
+    let canvas = document.getElementById('canvas');
     if (canvas.getContext) {
         let ctx = canvas.getContext('2d');
         let raf;
