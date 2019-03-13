@@ -50,11 +50,29 @@
     </div>
     <div class="container">
         <main>
-            <div class="jumbotron" style="text-align:center">
-                <!-- Title Div -->
-                <legend> Welcome to Revature! </legend>
+            <div>
+                <form action="url" method="GET">
+                    <fieldset>
+                        <div class="jumbotron" style="text-align:center">
+                            <!-- Title Div -->
+                            <legend> Log In </legend>
+                        </div>
+                        <div class="form-group">
+                            <!-- Username Div -->
+                            <label for="uName"> Username: </label>
+                            <input type="text" onchange="storeuName()" class="form-control" id="uName" name="uName" required />
+                        </div>
+                        <div class="form-group">
+                            <!-- Password Div -->
+                            <label for="pWord"> Password: </label>
+                            <input type="text" onchange="storepWord()" class="form-control" id="pWord" name="pWord" required />
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" id="loginSubmit" onclick="checkLogin();"> Login </button>
+                    </div>
+                </form>
             </div>
-            
         </main>
     </div>
 

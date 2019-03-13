@@ -61,6 +61,14 @@ function storeState() {
     localStorage.state = state;
     reButton();
 }
+function storeuName() {
+    var uName = document.getElementById("uName").value;
+    localStorage.uName = uName;
+}
+function storepWord() {
+    var pWord = document.getElementById("pWord").value;
+    localStorage.pWord = pWord;
+}
 
 //Load Functions
 /*
@@ -211,3 +219,7 @@ function isAdmin() {
         document.getElementById("gamePage").style = "display:none;";
     }
 }
+
+$(function () {
+    $('[data-toggle="popover"]').popover()
+  })
