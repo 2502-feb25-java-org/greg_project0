@@ -1,5 +1,6 @@
 //Comment like this
 //alert("Hello World!");
+"use strict"
 
 //Storage Functions
 function storefName() {
@@ -40,6 +41,26 @@ function storeeMail() {
     localStorage.eMail = eMail;
     reButton();
 }
+function storeAddr1() {
+    var addr1 = document.getElementById("addr1").value;
+    localStorage.addr1 = addr1;
+    reButton();
+}
+function storeAddr2() {
+    var addr2 = document.getElementById("addr2").value;
+    localStorage.addr2 = addr2;
+    reButton();
+}
+function storeZip() {
+    var zip = document.getElementById("zip").value;
+    localStorage.zip = zip;
+    reButton();
+}
+function storeState() {
+    var state = document.getElementById("state").value;
+    localStorage.state = state;
+    reButton();
+}
 
 //Load Functions
 function loadfName() {
@@ -74,15 +95,44 @@ function loadeMail() {
     var eMail = document.getElementById("eMail");
     eMail.value = localStorage.eMail;
 }
+function loadAddr1() {
+    var addr1 = document.getElementById("addr1");
+    addr1.value = localStorage.addr1;
+}
+function loadAddr2() {
+    var addr2 = document.getElementById("addr2");
+    addr2.value = localStorage.addr2;
+}
+function loadZip() {
+    var zip = document.getElementById("zip");
+    zip.value = localStorage.zip;
+}
+function loadState() {
+    var state = document.getElementById("state");
+    state.value = localStorage.state;
+}
+
+function isFirstVisit() {
+    let hasVisited = localStorage.hasVisited;
+}
 
 function loadEntries() {
-    loadfName();
-    loadlName();
-    loadGender();
-    loadAge();
-    loadPhone();
-    loadeMail();
-    reButton();
+    if (hasVisited) {
+        loadfName();
+        loadlName();
+        loadGender();
+        loadAge();
+        loadPhone();
+        loadeMail();
+        loadAddr1();
+        loadAddr2();
+        loadZip();
+        loadState();
+        reButton();
+    }
+    else {
+        localStorage.hasVisited = true;
+    }
 }
 
 //Info Checks and Validation
