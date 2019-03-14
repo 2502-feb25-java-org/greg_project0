@@ -6,7 +6,8 @@ public class App
     public static void main( String[] args )
     {
         //CreateArrayList();
-        CreateStack();
+        //CreateStack();
+        CreateHashTable();
     }
 
     static void CreateArrayList() {
@@ -27,5 +28,17 @@ public class App
         stack.push("Greg");
         stack.push("Hadjiyane");
         System.out.println(stack.peek());
+    }
+
+    static void CreateHashTable() {
+        Hashtable<Integer, String> emp = new Hashtable<>();
+        emp.put(1, "Greg");
+        emp.put(2, "Julie");
+        emp.put(3, "Caryl");
+        emp.put(4, "Alex");
+
+        for(Integer key : emp.keySet()) {
+            System.out.println(key + " " + emp.get(key));
+        }
     }
 }
