@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MethodTests",
+            "request": "launch",
+            "mainClass": "com.revature.MethodTests",
+            "projectName": "javaMavenTests"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - javaTests",
+            "request": "launch",
+            "mainClass": "com.revature.javaTests",
+            "projectName": "javaMavenTests"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - App",
             "request": "launch",
             "mainClass": "com.revature.App",
