@@ -12,8 +12,8 @@ class TestGenerics<T, U> {
         System.out.println(t + " " + u);
     }
 
-    static<T> String compare(T t1, T t2) {
-        boolean res =  t1.equals(t2);
+    static <T> String compare(T t1, T t2) {
+        boolean res =  t1.equals(t2); // == is by reference and .equals is by value
         if(res) {
             return "The objects are equal.";
         }
@@ -25,7 +25,7 @@ class TestGenerics<T, U> {
 
 class MainClass {
     public static void main(String[] args) {
-        TestGenerics<Integer, String> myGenericObj = new TestGenerics(123, "Generic");
+        TestGenerics<Integer, String> myGenericObj = new TestGenerics<Integer, String>(123, "Generic");
         myGenericObj.readValues();
 
         System.out.println(TestGenerics.compare(1, 2));

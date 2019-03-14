@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ReflectionDemo",
+            "request": "launch",
+            "mainClass": "com.revature.ReflectionDemo",
+            "projectName": "javaCollections"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MainClass",
             "request": "launch",
             "mainClass": "com.revature.MainClass",
