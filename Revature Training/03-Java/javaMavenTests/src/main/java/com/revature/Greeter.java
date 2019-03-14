@@ -26,9 +26,17 @@ class Greeter {
 //Classes and Interfaces = ProperCase
 //Variables($, _, 1) and Methods = camelCase
 //Constants = UPPERCASE
+class Address {
+    String addressLine1;
+    String addressLine2;
+    String city;
+    String zipcode, state, country = "USA";
+}
+
 abstract class Person {
     String name; //variables
     String ssn;
+    Address address;
     final String SPECIESID = "HOMOSAPIENS"; //constant
     public Person(String n, String s) {
         this.name = n;
