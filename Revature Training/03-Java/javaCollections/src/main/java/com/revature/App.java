@@ -15,7 +15,7 @@ public class App
         ar.add("Greg");
         ar.add("Hadjiyane");
         //ar.add(27);
-        //ar.add(1, "test");
+        ar.add(1, "test");
         for(String item : ar) {
             System.out.println(item);
         }
