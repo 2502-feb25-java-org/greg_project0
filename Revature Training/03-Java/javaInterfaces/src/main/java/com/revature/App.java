@@ -74,17 +74,17 @@ public class App
         */
 
         //In-class Assignment
-        int a[][]={{1,3,4},{3,4,5}};    // 1 3 4
-                                        // 3 4 5
+        int a[][]={{1,3,4},{5,6,7}};    // 1 3 4
+                                        // 5 6 7
         
-        int b[][]={{1,3,4},{3,4,5}};    // 1 3 4
-                                        // 3 4 5
+        int b[][]={{1,6,4},{8,9,5}};    // 1 6 4
+                                        // 8 9 5
         //Add 2 matrices above as a+b.
         int c[][] = new int[2][3];
         for(int i = 0; i < a.length; i++) {
             for(int j = 0; j < a[i].length; j++) {
                 c[i][j] = (a[i][j] + b[i][j]);
-                System.out.println(a[i][j] + " + " + b[i][j] + " = " + c[i][j]);
+                System.out.println(a[i][j] + " + " + b[i][j] + " = " + c[i][j] + " = c[" + i + "][" + j + "]");
             }
         }
         System.out.println("\n");
@@ -93,8 +93,22 @@ public class App
         int y[][]={{1,1,1},{2,2,2},{3,3,3}};
         //Multiply 2 matrices as x*y
         int z[][] = new int[3][3];
-        
+        for(int i = 0; i < x.length; i++) {
+            for(int j = 0; j < y[i].length; j++) {
+                for(int k = 0; k < x[i].length; k++) {
+                    z[i][j] += (x[i][k] * y[k][j]);
+                }
+                System.out.println("z[" + i + "][" + j + "] = " + z[i][j]);
+            }
+        }
+        System.out.println("\n");
 
-        
+        //1*1+1*2+1*3 1*1+1*2+1*3 1*1+1*2+1*3
+        //2*1+2*2+2*3 2*1+2*2+2*3 2*1+2*2+2*3
+        //3*1+3*2+3*3 3*1+3*2+3*3 3*1+3*2+3*3
+
+        //6 6 6
+        //12 12 12
+        //18 18 18
     }
 }
