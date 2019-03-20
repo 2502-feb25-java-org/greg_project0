@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DesignPatternDriver",
+            "request": "launch",
+            "mainClass": "com.revature.servlets.DesignPatternDriver",
+            "projectName": "Singleton"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ReflectionDemo",
             "request": "launch",
             "mainClass": "com.revature.ReflectionDemo",
